@@ -2,7 +2,7 @@ import "../../assets/styles/hero.css";
 
 export default function HeroSection() {
   return (
-    <section className="bg-black text-white h-[100vh] py-20 flex items-center justify-center flex-col relative">
+    <section className="bg-black text-white h-[100vh] flex items-center justify-center flex-col relative">
       <div className="container text-left">
         <p className="custom-mid-text gt-lt text-[30px] md:text-[51px] font-[300] max-w-[1200px] mx-auto z-[99] tracking-[-.64px] leading-[1.2]">
           <span>Optimists building</span>{" "}
