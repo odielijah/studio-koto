@@ -1,5 +1,5 @@
 import SkillsSlider from "./SkillsSlider.jsx";
-import PartnersFilter from "./PartnersFilter.jsx";
+import Collaborations from "./Collaborations.jsx";
 import TeamSection from "./TeamSection.jsx";
 
 export default function AboutModule({ module }) {
@@ -34,7 +34,7 @@ export default function AboutModule({ module }) {
 
       {/* Collaborators */}
       {module.number === "3.0" && (
-        <PartnersFilter filters={module.filters} categories={module.categories} />
+        <Collaborations filters={module.filters} categories={module.categories} />
       )}
 
       {/* Team */}
