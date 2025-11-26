@@ -91,8 +91,17 @@ import Blossom from "../assets/images/filter-images/Blossom-1.svg";
 import BuildersUnion from "../assets/images/filter-images/Builders-Union.svg";
 
 import screwNew from "../assets/images/screw-new.png";
-import Gustini from "../assets/images/gustini.png";
-import IrlToUrl from "../assets/images/irl-to-url.jpeg";
+
+import AmyHayden from "../assets/images/Amy-Hayden_Global-C-Suite-EA-London-768x883.jpg";
+import AngelaYu from "../assets/images/Angela-Yu_Sr-Designer-LA-1-768x883.jpg";
+import CourtneyGordon from "../assets/images/Courtney-Gordon_Client-Director-Berlin-768x883.jpg";
+import IsobelGreen from "../assets/images/Isobel-Green_Studio-CO-EA-London-768x883.jpg";
+import JakeKhan from "../assets/images/Jake-Khan_Junior-Copywriter-London-768x883.jpg";
+import JoshuaOsborne from "../assets/images/Joshua-Osborne_Art-Director-London-768x883.jpg";
+import KyleToukatly from "../assets/images/Kyle-Toukatly_Sr-Designer-LA-768x883.jpg";
+import LaurenFogelstrom from "../assets/images/Lauren-Fogelstrom_Client-Manager-LA-768x883.jpg";
+import ZoeSchneider from "../assets/images/Zoe-Schneider_Designer-LA-768x883.jpg";
+import NoPotrait from "../assets/images/Koto_NoPortrait-768x883.png";
 
 const categories = {
   Partners: [
@@ -295,59 +304,69 @@ const modules = [
     hr: true,
     teamSlides: [
       {
-        slideImage: Gustini,
-        name: "Fred North",
+        slideImage: NoPotrait,
+        name: "Odi Esther",
+        role: "Website Developer",
+      },
+      {
+        slideImage: AmyHayden,
+        name: "Amy Hayden",
         role: "Creative Director",
       },
       {
-        slideImage: IrlToUrl,
-        name: "Harrison Dew",
-        role: "Designer Director",
+        slideImage: AngelaYu,
+        name: "Angela Yu",
+        role: "Senior Designer",
       },
       {
-        slideImage: Gustini,
-        name: "Ingrid Tagel",
-        role: "Management Accountant",
+        slideImage: CourtneyGordon,
+        name: "Courtney Gordon",
+        role: "Client Director",
       },
       {
-        slideImage: IrlToUrl,
-        name: "Jake Khan",
+        slideImage: NoPotrait,
+        name: "Rose Kerr",
+        role: "Client Director",
+      },
+      {
+        slideImage: IsobelGreen,
+        name: "Isobel Green",
         role: "Strategist",
       },
       {
-        slideImage: Gustini,
-        name: "Joe Ling",
-        role: "Creative Director",
+        slideImage: NoPotrait,
+        name: "North Bryan",
+        role: "Design Director",
       },
       {
-        slideImage: IrlToUrl,
+        slideImage: JakeKhan,
+        name: "Jake Khan",
+        role: "Junior Copywriter",
+      },
+      {
+        slideImage: JoshuaOsborne,
         name: "Joshua Osborne",
         role: "Art Director",
       },
       {
-        slideImage: Gustini,
-        name: "Katey Harvey",
-        role: "Managing Director",
+        slideImage: NoPotrait,
+        name: "Natalie Tobias",
+        role: "Strategist",
       },
       {
-        slideImage: IrlToUrl,
+        slideImage: KyleToukatly,
         name: "Kyle Toukatley",
         role: "Senior Designer",
       },
       {
-        slideImage: Gustini,
-        name: "Lily Dent",
-        role: "Designer",
+        slideImage: LaurenFogelstrom,
+        name: "Lauren Fogelstrom",
+        role: "Client Manager",
       },
       {
-        slideImage: IrlToUrl,
-        name: "Marius Trinkunas",
+        slideImage: ZoeSchneider,
+        name: "Zoe Schneider",
         role: "Designer",
-      },
-      {
-        slideImage: Gustini,
-        name: "Phoebe Roberts",
-        role: "Client Executive",
       },
     ],
     hr: true,

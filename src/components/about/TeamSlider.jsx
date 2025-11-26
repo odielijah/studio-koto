@@ -9,7 +9,7 @@ export default function TeamSlider({ slides, activeIndex }) {
     const timeout = setTimeout(() => {
       setFadeIndex(activeIndex);
       setFade(true);
-    }, 200);
+    }, 350);
     return () => clearTimeout(timeout);
   }, [activeIndex]);
 
