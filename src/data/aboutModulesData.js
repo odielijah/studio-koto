@@ -44,7 +44,7 @@ import Raw from "../assets/images/filter-images/Raw.svg";
 
 import Bolt from "../assets/images/filter-images/Bolt.svg";
 import Fluz from "../assets/images/filter-images/Fluz-Logo.svg";
-import Paypal from "../assets/images/filter-images/Paypal.svg";
+import Paypal from "../assets/images/filter-images/PayPal.svg";
 import Pleo from "../assets/images/filter-images/Pleo.svg";
 import Qonto from "../assets/images/filter-images/Qonto.svg";
 import Titan from "../assets/images/filter-images/Titan.svg";
