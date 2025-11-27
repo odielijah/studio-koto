@@ -50,15 +50,7 @@ export default function Header() {
       <div className="nav-panel">
         <div className="container flex items-center justify-between">
           {/* Logo */}
-          <div
-            className="nav-panel-logo cursor-pointer outline-none"
-            onClick={() => {
-              // Only toggle menu on small screens
-              if (window.innerWidth < 768) {
-                setMenuOpen(!menuOpen);
-              }
-            }}
-          >
+          <div className="nav-panel-logo cursor-pointer outline-none">
             <Link to="/">
               <img
                 src={kotoLogo}
