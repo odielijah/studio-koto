@@ -91,6 +91,23 @@ import Blossom from "../assets/images/filter-images/Blossom-1.svg";
 import BuildersUnion from "../assets/images/filter-images/Builders-Union.svg";
 
 import screwNew from "../assets/images/screw-new.png";
+import NewNatural from "../assets/images/Meatable.png";
+import BlaBla from "../assets/images/BlaBlaCar-704x396.png";
+import MaxLife from "../assets/images/Fluz_Strategic-Framework2-1-704x396.jpg";
+import FLuzPhoto from "../assets/images/Fluz_Photography-1-704x396.png";
+import HeadSpace from "../assets/images/Headspace02_Photography-1-704x396.png";
+import LightSpeed from "../assets/images/Lightspeed01_Photography-1-704x396.jpg";
+import SonosCampaign from "../assets/images/Sonos_Campaign-1-704x396.jpg";
+import Bolt1 from "../assets/images/Bolt_Type-1-704x396.png";
+import Bolt2 from "../assets/images/Bolt02_AD-1-704x396.png";
+import Plume from "../assets/images/Plume_Naming-704x396.png";
+import Vitamin from "../assets/images/Vitamin_Naming-704x396.png";
+import YuboImage from "../assets/images/Yubo_AD-1-704x396.png";
+import Bolt3 from "../assets/images/BOLT_Brand-Identity-704x396.png";
+import FluzIllustration from "../assets/images/Fluz_Illustration-1-704x396.png";
+import Guideline1 from "../assets/images/Dandy_Guidelines-1-704x396.png";
+import Guideline2 from "../assets/images/DeExtinction03_Guidelines-1-704x396.jpg";
+import Guideline3 from "../assets/images/Antic03_Guidelines-1-704x396.png";
 
 import AmyHayden from "../assets/images/Amy-Hayden_Global-C-Suite-EA-London-768x883.jpg";
 import AngelaYu from "../assets/images/Angela-Yu_Sr-Designer-LA-1-768x883.jpg";
@@ -240,30 +257,36 @@ const modules = [
         heading: "Strategy",
         description: `We author or evolve brand strategy that differentiates and dictates meaningful visual and verbal identities.`,
         slides: [
+          { slideImage: NewNatural, slideTitle: "Brand Idea" },
           { slideImage: screwNew, slideTitle: "Brand Idea" },
-          { slideImage: "", slideTitle: "Strategic Framework" },
-          { slideImage: "", slideTitle: "Brand Architecture" },
+          { slideImage: MaxLife, slideTitle: "Strategic Framework" },
+          { slideImage: BlaBla, slideTitle: "Brand Architecture" },
         ],
       },
       {
         heading: "Creative",
         description: `We uncover insights and align on a visual and verbal vision to build idea-driven world-class brands.`,
         slides: [
-          { slideImage: "", slideTitle: "Brand Identity" },
-          { slideImage: "", slideTitle: "Naming" },
-          { slideImage: "", slideTitle: "Illustration" },
-          { slideImage: "", slideTitle: "Art direction" },
-          { slideImage: "", slideTitle: "Typography" },
+          { slideImage: Bolt3, slideTitle: "Brand Identity" },
+          { slideImage: Plume, slideTitle: "Naming" },
+          { slideImage: Vitamin, slideTitle: "Naming" },
+          { slideImage: FluzIllustration, slideTitle: "Illustration" },
+          { slideImage: Bolt2, slideTitle: "Art direction" },
+          { slideImage: YuboImage, slideTitle: "Typography" },
+          { slideImage: Bolt1, slideTitle: "Typography" },
         ],
       },
       {
         heading: "Execution",
         description: `We codify everything we craft—applying creative to any execution and working alongside you for whatever comes next.`,
         slides: [
-          { slideImage: "", slideTitle: "Photography" },
-          { slideImage: "", slideTitle: "Campaign" },
-          { slideImage: "", slideTitle: "Website" },
-          { slideImage: "", slideTitle: "Guidelines" },
+          { slideImage: HeadSpace, slideTitle: "Photography" },
+          { slideImage: FLuzPhoto, slideTitle: "Photography" },
+          { slideImage: LightSpeed, slideTitle: "Photography" },
+          { slideImage: SonosCampaign, slideTitle: "Campaign" },
+          { slideImage: Guideline1, slideTitle: "Guidelines" },
+          { slideImage: Guideline2, slideTitle: "Guidelines" },
+          { slideImage: Guideline3, slideTitle: "Guidelines" },
         ],
       },
     ],

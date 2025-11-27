@@ -44,7 +44,7 @@ export default function Collaborations({ filters, categories }) {
       </div>
 
       {/* animated grid */}
-      <div className="mt-8 pt-[54px] pb-[102px] flex justify-center">
+      <div className="mt-8 pt-[54px] pb-[102px] max-md:py-[20px] flex justify-center">
         <AnimatePresence mode="wait">
           <motion.div
             key={active} // important for exit/enter

@@ -4,7 +4,7 @@ import TeamSection from "./TeamSection.jsx";
 
 export default function AboutModule({ module }) {
   return (
-    <div className="module-about text-white py-[80px] max-md:pt-[20px]">
+    <div className="module-about text-white py-[80px] max-md:py-[40px]">
       <div className="container">
         {module.hr && <hr className="mb-[40px] opacity-[0.3]" />}
 
@@ -19,8 +19,8 @@ export default function AboutModule({ module }) {
     gt-th
     ${
       module.largeText
-        ? "text-[60px] max-md:text-[36px] leading-[1.1]"
-        : "text-[36px] leading-[1]"
+        ? "text-[60px] max-md:text-[36px] leading-[1.1] max-md:leading-[1.2]"
+        : "text-[36px] leading-[1] max-md:text-[24px] max-md:leading-[1.2]"
     }
   `}
           style={{ maxWidth: module.maxWidth }}
