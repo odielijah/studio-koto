@@ -19,7 +19,7 @@ import Tropic from "../assets/images/filter-images/Tropic.svg";
 
 import Fanta from "../assets/images/filter-images/Fanta.svg";
 import Mars from "../assets/images/filter-images/Mars.svg";
-import VitaminWater from "../assets/images/filter-images/Vitamin-water.svg";
+import VitaminWater from "../assets/images/filter-images/Vitamin-Water.svg";
 
 import Antic from "../assets/images/filter-images/Antic.svg";
 import Polkadot from "../assets/images/filter-images/Polkadot.svg";
