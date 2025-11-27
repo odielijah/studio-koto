@@ -66,8 +66,8 @@ import Flo from "../assets/images/filter-images/Flo.svg";
 import Huma from "../assets/images/filter-images/Huma.svg";
 import Livi from "../assets/images/filter-images/Kry.svg";
 
-import AirTasker from "../assets/images/filter-images/AirTasker.svg";
-import BackMarket from "../assets/images/filter-images/Mars.svg";
+import AirTasker from "../assets/images/filter-images/Airtasker.svg";
+import BackMarket from "../assets/images/filter-images/Backmarket.svg";
 import Fiverr from "../assets/images/filter-images/Fiverr.svg";
 import GoDaddy from "../assets/images/filter-images/GoDaddy.svg";
 
@@ -86,7 +86,7 @@ import Hilton from "../assets/images/filter-images/Hilton.svg";
 import LoveHolidays from "../assets/images/filter-images/LoveHolidays.svg";
 
 import A16Crypto from "../assets/images/filter-images/a16z-Crypto.svg";
-import A16Z from "../assets/images/filter-images/A16Z.svg";
+import A16Z from "../assets/images/filter-images/a16z.svg";
 import Blossom from "../assets/images/filter-images/Blossom-1.svg";
 import BuildersUnion from "../assets/images/filter-images/Builders-Union.svg";
 
