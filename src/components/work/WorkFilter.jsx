@@ -57,7 +57,7 @@ export default function WorkFilter({
           </a>
         ))}
 
-        <span className="work-filter-item work-filter-item--projects z-[999] text-white">
+        <span className="work-filter-item work-filter-item--projects z-[9] text-white">
           Projects <sup>{visibleCount}</sup>
         </span>
       </p>

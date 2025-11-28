@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function TeamList({ slides, activeIndex, setActiveIndex }) {
   const [slidesPerView, setSlidesPerView] = useState(7);

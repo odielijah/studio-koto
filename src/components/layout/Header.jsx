@@ -1,13 +1,11 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import kotoLogo from "../../assets/images/koto-logo.png";
 import "../../assets/styles/header.css";
 
-export default function Header() {
+export default function Header({ trigger }) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation(); // to get current path
-
-  const handleLinkClick = () => setMenuOpen(false);
+  const location = useLocation();
 
   const links = [
     { name: "Work", path: "/work" },
@@ -50,17 +48,20 @@ export default function Header() {
       <div className="nav-panel">
         <div className="container flex items-center justify-between">
           {/* Logo */}
-          <div className="nav-panel-logo cursor-pointer outline-none">
-            <Link to="/">
+          <div className="nav-panel-logo outline-none">
+            <button
+              onClick={() => trigger("/")}
+              className="outline-none cursor-pointer"
+            >
               <img
                 src={kotoLogo}
                 alt="Koto Logo"
                 className="w-[61px] h-[30px] outline-none"
               />
-            </Link>
+            </button>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu toggle */}
           <div
             className="menu-nav md:hidden text-white uppercase font-mono font-light cursor-pointer transition-all duration-300"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -70,60 +71,83 @@ export default function Header() {
 
           {/* Desktop nav */}
           <ul className="hidden md:flex text-white items-center gap-10 uppercase font-mono font-light text-sm">
-            {links.map((link) => (
-              <li key={link.name} className="relative">
-                <Link
-                  to={link.path}
-                  className={`relative pb-1 transition-colors duration-300 hover:text-gray-300`}
-                >
-                  {link.name}
-
-                  {/* underline */}
-                  <span
-                    className={`absolute left-0 bottom-0 h-[.5px] bg-white transition-all duration-300 ${
-                      location.pathname === link.path
-                        ? "w-full"
-                        : "w-0 group-hover:w-full"
+            {links.map((link) => {
+              const isActive = location.pathname === link.path; // check if active
+              return (
+                <li key={link.name} className="relative group">
+                  <button
+                    onClick={() => !isActive && trigger(link.path)} // disable click if active
+                    className={`relative pb-1 transition-colors duration-300 uppercase cursor-pointer ${
+                      isActive
+                        ? "text-white pointer-events-none"
+                        : "hover:text-gray-300"
                     }`}
-                  />
-                </Link>
-              </li>
-            ))}
+                  >
+                    {link.name}
+                    <span
+                      className={`absolute left-0 bottom-0 h-[1px] bg-white transition-all duration-300 ${
+                        isActive ? "w-full" : "w-0 group-hover:w-full"
+                      }`}
+                    />
+                  </button>
+                </li>
+              );
+            })}
           </ul>
 
           {/* Mobile nav */}
           <ul
-            className={`uppercase md:hidden absolute top-full left-0 w-full bg-black text-white flex flex-col p-6 pt-0 transition-all duration-500 ease-in-out ${
+            className={`uppercase md:hidden h-screen absolute top-[95%] left-0 w-full bg-black text-white flex flex-col p-6 pt-0 transition-all duration-500 ease-in-out ${
               menuOpen
                 ? "opacity-100 pointer-events-auto translate-y-0"
                 : "opacity-0 pointer-events-none -translate-y-2"
             }`}
           >
-            {links.map((link) => (
-              <li key={link.name}>
-                <Link
-                  to={link.path}
-                  className="block space-mono text-[30px] transition-all duration-300"
-                  onClick={handleLinkClick}
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
+            <div className="mb-[2rem] mt-[2rem]">
+              {links.map((link) => {
+                const isActive = location.pathname === link.path;
+                return (
+                  <li key={link.name}>
+                    <button
+                      onClick={() => {
+                        if (!isActive) {
+                          trigger(link.path);
+                          setMenuOpen(false);
+                        }
+                      }}
+                      className={`block space-mono pb-[10px] text-[30px] cursor-pointer text-left uppercase transition-all duration-300 ${
+                        isActive ? "pointer-events-none text-white" : ""
+                      }`}
+                    >
+                      <span className="relative">
+                        {link.name}
+                        <span
+                          className={`absolute left-0 bottom-0 h-[1px] bg-white transition-all duration-300 ${
+                            isActive ? "w-full" : "w-0"
+                          }`}
+                        />
+                      </span>
+                    </button>
+                  </li>
+                );
+              })}
+            </div>
 
-            {/* Social links only for mobile */}
-            <li className="pt-5 mt-5 border-white border-t-[.5px] flex flex-col gap-3">
-              {footerLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.url}
-                  className="flex items-center gap-2 space-mono text-[12px] transition-colors duration-300 hover:text-gray-300"
-                >
-                  <ArrowIcon />
-                  {link.name}
-                </a>
-              ))}
-            </li>
+            {/* Footer links */}
+            <div>
+              <li className="pt-5 mt-5 border-white border-t-[.5px] cursor-pointer flex flex-col gap-3">
+                {footerLinks.map((link, index) => (
+                  <a
+                    key={index}
+                    href={link.url}
+                    className="flex items-center gap-2 space-mono text-[12px] transition-colors duration-300 hover:text-gray-300"
+                  >
+                    <ArrowIcon />
+                    {link.name}
+                  </a>
+                ))}
+              </li>
+            </div>
           </ul>
         </div>
       </div>
