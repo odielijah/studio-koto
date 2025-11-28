@@ -35,8 +35,10 @@ export default function TeamList({ slides, activeIndex, setActiveIndex }) {
         className="name-list relative overflow-hidden"
         spaceBetween={16}
         autoHeight={true}
-        allowTouchMove={false}
-        simulateTouch={false}
+        allowTouchMove={true}
+        simulateTouch={true}
+        noSwiping={true}
+        noSwipingClass="no-swipe"
         centeredSlides={!pinTop}
         style={{ height: `${slidesPerView * 76}px` }}
       >
