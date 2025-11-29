@@ -7,30 +7,33 @@ import About from "./pages/About.jsx";
 import Careers from "./pages/Careers.jsx";
 import Contact from "./pages/Contact.jsx";
 import TransitionProvider from "./components/TransitionProvider.jsx";
+import PageLoader from "./components/PageLoader.jsx";
 
 function App() {
   return (
-    <TransitionProvider>
-      {(trigger) => (
-        <>
-          <Header trigger={trigger} />
+    <PageLoader>
+      <TransitionProvider>
+        {(trigger) => (
+          <>
+            <Header trigger={trigger} />
 
-          <main id="main" className="bg-black">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/work" element={<Work />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </main>
+            <main id="main" className="bg-black">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/work" element={<Work />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/careers" element={<Careers />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+            </main>
 
-          <div className="bg-black">
-            <Footer />
-          </div>
-        </>
-      )}
-    </TransitionProvider>
+            <div className="bg-black">
+              <Footer />
+            </div>
+          </>
+        )}
+      </TransitionProvider>
+    </PageLoader>
   );
 }
 
