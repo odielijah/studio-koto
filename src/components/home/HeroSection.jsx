@@ -11,7 +11,7 @@ export default function HeroSection({ nextSectionRef }) {
   return (
     <section className="bg-black text-white h-[100vh] mt-[-80px] flex items-center justify-center flex-col relative">
       <div className="container text-left">
-        <p className="custom-mid-text gt-th text-[29px] md:text-[51px] font-[300] max-w-[1200px] mx-auto z-[99] tracking-[-.64px] leading-[1.2]">
+        <p className="gt-th text-[36px] max-[430px]:text-[36px] md:text-[51px] font-[300] max-w-[1200px] mx-auto z-[99] tracking-[-.64px] leading-[1.2]">
           <span>Optimists building</span>{" "}
           <span className="underline-animate">brand</span> <span>and</span>{" "}
           <span className="underline-animate">digital</span>
@@ -23,7 +23,7 @@ export default function HeroSection({ nextSectionRef }) {
         </p>
 
         <div
-          className="absolute bottom-15 cursor-pointer"
+          className="absolute bottom-20 max-md:bottom-6 cursor-pointer"
           onClick={scrollToNextSection}
         >
           <div className="hero-navigation">
