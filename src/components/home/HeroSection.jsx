@@ -11,7 +11,7 @@ export default function HeroSection({ nextSectionRef }) {
   return (
     <section className="bg-black text-white h-[100vh] mt-[-80px] flex items-center justify-center flex-col relative">
       <div className="container text-left">
-        <p className="gt-th text-[40px] max-[430px]:text-[40px] md:text-[51px] font-[300] max-w-[1200px] mx-auto z-[99] tracking-[-.64px] leading-[1.2]">
+        <p className="gt-th text-[51px] max-[320px]:text-[32px] max-md:text-[38px] font-[300] max-w-[1200px] mx-auto z-[99] tracking-[-.64px] leading-[1.2]">
           <span>Optimists building</span>{" "}
           <span className="underline-animate">brand</span> <span>and</span>{" "}
           <span className="underline-animate">digital</span>
