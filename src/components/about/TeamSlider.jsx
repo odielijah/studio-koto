@@ -18,7 +18,7 @@ export default function TeamSlider({ slides, activeIndex }) {
     >
       <AnimatePresence mode="wait">
         {member?.slideImage ? (
-          <div className="w-full h-auto bg-black/40 relative overflow-hidden">
+          <div className="w-full h-auto bg-white/20 relative overflow-hidden">
             <motion.img
               key={activeIndex}
               src={member.slideImage}
