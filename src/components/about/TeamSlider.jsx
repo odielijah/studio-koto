@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function TeamSlider({ slides, activeIndex }) {
   const member = slides[activeIndex];
@@ -16,6 +16,7 @@ export default function TeamSlider({ slides, activeIndex }) {
         relative
       "
     >
+      <AnimatePresence mode="wait">
         {member?.slideImage ? (
           <motion.img
             key={activeIndex}
@@ -33,10 +34,10 @@ export default function TeamSlider({ slides, activeIndex }) {
             className="w-full h-full bg-black/40"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
             transition={{ duration: 0.45, ease: "easeInOut" }}
           />
         )}
+      </AnimatePresence>
     </div>
   );
 }
