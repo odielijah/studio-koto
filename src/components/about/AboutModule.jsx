@@ -1,10 +1,17 @@
+import { motion } from "framer-motion";
 import SkillsSlider from "./SkillsSlider.jsx";
 import Collaborations from "./Collaborations.jsx";
 import TeamSection from "./TeamSection.jsx";
 
 export default function AboutModule({ module }) {
   return (
-    <div className="module-about text-white py-[80px] max-md:py-[40px]">
+    <motion.div
+      className="module-about text-white py-[80px] max-md:py-[40px]"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
       <div className="container">
         {module.hr && <hr className="mb-[40px] opacity-[0.3]" />}
 
@@ -34,13 +41,16 @@ export default function AboutModule({ module }) {
 
       {/* Collaborators */}
       {module.number === "3.0" && (
-        <Collaborations filters={module.filters} categories={module.categories} />
+        <Collaborations
+          filters={module.filters}
+          categories={module.categories}
+        />
       )}
 
       {/* Team */}
       {module.number === "4.0" && (
         <TeamSection teamSlides={module.teamSlides} />
       )}
-    </div>
+    </motion.div>
   );
 }
