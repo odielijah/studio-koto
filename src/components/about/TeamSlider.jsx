@@ -1,5 +1,11 @@
 import { motion, AnimatePresence } from "framer-motion";
 
+const fadeVariants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 }
+};
+
 export default function TeamSlider({ slides, activeIndex }) {
   const member = slides[activeIndex];
 
@@ -16,27 +22,29 @@ export default function TeamSlider({ slides, activeIndex }) {
         relative
       "
     >
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="sync">
         {member?.slideImage ? (
           <motion.img
-            loading="lazy"
             key={member.slideImage}
             src={member.slideImage}
+            loading="lazy"
             alt={member.name}
-            className="w-full h-auto object-cover"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="w-full h-auto object-cover absolute inset-0"
+            variants={fadeVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{ duration: 0.35, ease: "easeInOut" }}
           />
         ) : (
           <motion.div
             key="empty"
-            className="w-full h-full bg-black/40"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.45, ease: "easeInOut" }}
+            className="w-full h-full bg-black/40 absolute inset-0"
+            variants={fadeVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{ duration: 0.35, ease: "easeInOut" }}
           />
         )}
       </AnimatePresence>
