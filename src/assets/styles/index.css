@@ -26,6 +26,10 @@
   font-display: swap;
 }
 
+html, body, a, button, input, textarea, select, * {
+  cursor: none !important;
+}
+
 body {
   background: #000;
 }

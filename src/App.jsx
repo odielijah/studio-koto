@@ -8,6 +8,7 @@ import Careers from "./pages/Careers.jsx";
 import Contact from "./pages/Contact.jsx";
 import TransitionProvider from "./components/TransitionProvider.jsx";
 import PageLoader from "./components/PageLoader.jsx";
+import Cursor from "./components/Cursor.jsx";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
       <TransitionProvider>
         {(trigger) => (
           <>
+            {/* Custom cursor */}
+            <Cursor />
             <Header trigger={trigger} />
 
             <main id="main" className="bg-black">

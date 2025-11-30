@@ -13,7 +13,7 @@ function renderFeed() {
       viewport={{ once: true }}
     >
       <div className="feed">
-        <a className="" href="#">
+        <a className="cursor-view" href="#">
           <div className="video-box">
             {feedPost.type === "video" && (
               <video
