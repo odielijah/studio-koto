@@ -24,12 +24,12 @@ export default function Cursor() {
   useEffect(() => {
     if (!showCursor) return;
 
-    const handleMove = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
-      const target = e.target;
+    const detectHover = (x, y) => {
+      const element = document.elementFromPoint(x, y);
+      if (!element) return;
 
       // PROJECT ITEM DETECTION
-      const project = target.closest(".project-item");
+      const project = element.closest(".project-item");
       if (project) {
         setState({
           hover: true,
@@ -42,12 +42,12 @@ export default function Cursor() {
 
       // OTHER CURSOR TYPES
       let type = "";
-      if (target.closest(".cursor-view")) type = "view";
-      else if (target.closest(".cursor-read")) type = "read";
-      else if (target.closest(".cursor-arrow-left")) type = "arrow-left";
-      else if (target.closest(".cursor-arrow-right")) type = "arrow-right";
+      if (element.closest(".cursor-view")) type = "view";
+      else if (element.closest(".cursor-read")) type = "read";
+      else if (element.closest(".cursor-arrow-left")) type = "arrow-left";
+      else if (element.closest(".cursor-arrow-right")) type = "arrow-right";
 
-      const isHover = Boolean(target.closest(".hoverable"));
+      const isHover = Boolean(element.closest(".hoverable"));
       setState({
         hover: isHover,
         type,
@@ -56,9 +56,25 @@ export default function Cursor() {
       });
     };
 
+    const handleMove = (e) => {
+      setPosition({ x: e.clientX, y: e.clientY });
+      detectHover(e.clientX, e.clientY);
+    };
+
+    const handleScroll = () => {
+      detectHover(position.x, position.y); // update hover at current cursor
+    };
+
     window.addEventListener("mousemove", handleMove);
-    return () => window.removeEventListener("mousemove", handleMove);
-  }, [showCursor]);
+    window.addEventListener("scroll", handleScroll, true); // capture scroll
+    window.addEventListener("resize", handleScroll); // update hover on resize
+
+    return () => {
+      window.removeEventListener("mousemove", handleMove);
+      window.removeEventListener("scroll", handleScroll, true);
+      window.removeEventListener("resize", handleScroll);
+    };
+  }, [showCursor, position]);
 
   if (!showCursor) return null; // don't render cursor on touch devices
 
@@ -77,8 +93,32 @@ export default function Cursor() {
       {/* Standard cursor types */}
       {state.type === "view" && <span className="cursor-text">view</span>}
       {state.type === "read" && <span className="cursor-text">read</span>}
-      {state.type === "arrow-left" && <span className="cursor-text">←</span>}
-      {state.type === "arrow-right" && <span className="cursor-text">→</span>}
+      {state.type === "arrow-left" && (
+        <span className="cursor-text">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            width="18"
+            height="18"
+          >
+            <path d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"></path>
+          </svg>
+        </span>
+      )}
+      {state.type === "arrow-right" && (
+        <span className="cursor-text">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            width="18"
+            height="18"
+          >
+            <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+          </svg>
+        </span>
+      )}
 
       {/* Project tooltip */}
       {state.type === "project" && (

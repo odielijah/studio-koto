@@ -58,7 +58,7 @@ export default function Slider() {
         }}
       >
         {slides.map((slide, index) => (
-          <SwiperSlide key={index} className="koto-slide">
+          <SwiperSlide key={index} className="koto-slide cursor-view">
             <a
               href={slide.link}
               target="_blank"
