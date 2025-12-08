@@ -43,7 +43,7 @@ export default function HeroImages({ activePack }) {
 
     // Move left
     let currentX = x.get();
-    currentX += (baseVelocity.current * delta) / 1000;
+    currentX += (baseVelocity.current * delta) / 5000;
 
     // Loop back when we reach the end of first set
     if (currentX <= loopPoint) {
@@ -146,7 +146,7 @@ export default function HeroImages({ activePack }) {
                   }}
                 >
                   {/* Render segments twice for seamless looping */}
-                  {[...pack.segments, ...pack.segments].map((seg, idx) => (
+                  {[...pack.segments, ...pack.segments, ...pack.segments].map((seg, idx) => (
                     <div
                       key={`${seg.id}-${idx}`}
                       className="home-images-segment"
