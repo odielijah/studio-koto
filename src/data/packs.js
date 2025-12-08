@@ -9,6 +9,25 @@ import peloton from "../assets/images/peloton-seg.png";
 import sonos from "../assets/images/sonos-seg.png";
 import uberEats from "../assets/images/uber-eats-seg.png";
 import venmo from "../assets/images/venmo-seg.png";
+import soen from "../assets/images/soen-seg.png";
+import soenFull from "../assets/images/soen-landscape.jpg";
+import soenVideo from "../assets/videos/soen-video.mp4";
+import chrome from "../assets/videos/chrome-seg.mp4";
+import df from "../assets/videos/d-and-f-seg.mp4";
+import elisa from "../assets/videos/elisa-seg.mp4";
+import pen from "../assets/videos/pen-seg.mp4";
+import spirit from "../assets/images/spirit-seg.gif";
+import headspace from "../assets/images/headspace-seg.gif";
+import duo from "../assets/images/duo-seg.gif";
+import discord from "../assets/images/discord-seg.gif";
+import bolt from "../assets/videos/bolt-seg.mp4";
+import chanel from "../assets/videos/chanel-seg.mp4";
+import girl from "../assets/videos/girl-seg.mp4";
+import going from "../assets/videos/going-seg.mp4";
+import luke from "../assets/videos/luke-seg.mp4";
+import nike from "../assets/videos/nike-seg.mp4";
+import tabler from "../assets/videos/tabler-seg.mp4";
+import pera from "../assets/videos/pera.mp4";
 
 const dummyImage = "/images/dummy-image.jpg";
 export const packs = [
@@ -20,36 +39,34 @@ export const packs = [
         images: [
           {
             id: "b0-1",
-            src: dummyImage,
+            src: headspace,
             style: { top: "30%", left: "0%" },
-            orientation: "vertical-alt",
+            orientation: "horizontal",
             desktopOrientation: "portrait",
-            title: "whatsapp",
           },
           {
             id: "b0-2",
-            src: dummyImage,
+            src: soenVideo,
+            type: "video",
             style: { top: "0%", left: "35%" },
             orientation: "vertical-alt",
-            desktopOrientation: "portrait",
-            title: "zip",
-            odd: true,
+            desktopOrientation: "square",
           },
           {
             id: "b0-3",
-            src: dummyImage,
+            type: "video",
+            src: df,
             style: { bottom: "10%", left: "50%" },
             orientation: "vertical-alt",
             desktopOrientation: "portrait",
-            title: "netflix",
           },
           {
             id: "b0-4",
-            src: amazonMusic,
+            src: elisa,
+            type: "video",
             style: { top: "27%", right: "10%" },
             orientation: "horizontal",
             desktopOrientation: "landscape",
-            title: "yubo",
             odd: true,
           },
         ],
@@ -59,14 +76,16 @@ export const packs = [
         images: [
           {
             id: "b1-1",
-            src: "/images/brand-1-1.jpg",
+            src: chanel,
+            type: "video",
             style: { top: "50%", left: "10%" },
             orientation: "horizontal",
             desktopOrientation: "landscape",
           },
           {
             id: "b1-2",
-            src: "/images/brand-1-2.jpg",
+            type: "video",
+            src: going,
             style: { top: "0%", left: "30%" },
             orientation: "horizontal",
             desktopOrientation: "landscape",
@@ -74,18 +93,18 @@ export const packs = [
           },
           {
             id: "b1-3",
-            src: "/images/brand-1-3.jpg",
+            src: spirit,
             style: { top: "40%", left: "50%" },
             orientation: "horizontal",
             desktopOrientation: "landscape",
           },
           {
             id: "b1-4",
-            src: "/images/brand-1-4.jpg",
+            type: "video",
+            src: soenVideo,
             style: { top: "0%", left: "70%" },
             orientation: "vertical-alt",
             desktopOrientation: "portrait",
-            odd: true,
           },
         ],
       },
@@ -94,30 +113,33 @@ export const packs = [
         images: [
           {
             id: "b2-1",
-            src: dummyImage,
+            src: girl,
+            type: "video",
             style: { top: "5%", left: "0%" },
             orientation: "vertical-alt",
             desktopOrientation: "portrait",
           },
           {
             id: "b2-2",
-            src: dummyImage,
+            src: nike,
+            type: "video",
             style: { top: "30%", left: "50%" },
             orientation: "horizontal",
             desktopOrientation: "landscape",
           },
           {
             id: "b2-3",
-            src: dummyImage,
+            src: tabler,
+            type: "video",
             style: { top: "10%", right: "0%" },
             orientation: "vertical",
             desktopOrientation: "portrait",
           },
           {
             id: "b2-4",
-            src: dummyImage,
+            src: misfits,
             style: { top: "50%", left: "25%" },
-            orientation: "horizontal",
+            orientation: "vertical-alt",
             desktopOrientation: "square",
             odd: true,
           },
@@ -134,29 +156,31 @@ export const packs = [
         images: [
           {
             id: "d0-1",
-            src: "/images/digital-0-1.jpg",
+            src: luke,
+            type: "video",
             style: { top: "30%", left: "70%" },
             orientation: "vertical",
             desktopOrientation: "portrait",
           },
           {
             id: "d0-2",
-            src: "/images/digital-0-2.jpg",
+            src: headspace,
             style: { top: "50%", left: "0%" },
-            orientation: "vertical-alt",
+            orientation: "horizontal",
             desktopOrientation: "portrait",
             odd: true,
           },
           {
             id: "d0-3",
-            src: "/images/digital-0-3.jpg",
+            src: elisa,
+            type: "video",
             style: { top: "20%", left: "20%" },
             orientation: "horizontal",
             desktopOrientation: "landscape",
           },
           {
             id: "d0-4",
-            src: "/images/digital-0-4.jpg",
+            src: duo,
             style: { top: "50%", left: "35%" },
             orientation: "horizontal",
             desktopOrientation: "landscape",
@@ -169,14 +193,15 @@ export const packs = [
         images: [
           {
             id: "d1-1",
-            src: "/images/digital-1-1.jpg",
+            src: df,
+            type: "video",
             style: { top: "60%", left: "40%" },
             orientation: "vertical",
             desktopOrientation: "portrait",
           },
           {
             id: "d1-2",
-            src: "/images/digital-1-2.jpg",
+            src: misfits,
             style: { top: "40%", right: "0%" },
             orientation: "vertical-alt",
             desktopOrientation: "portrait",
@@ -184,16 +209,17 @@ export const packs = [
           },
           {
             id: "d1-3",
-            src: "/images/digital-1-3.jpg",
+            src: girl,
+            type: "video",
             style: { top: "30%", left: "12%" },
             orientation: "vertical",
             desktopOrientation: "portrait",
           },
           {
             id: "d1-4",
-            src: "/images/digital-1-4.jpg",
+            src: headspace,
             style: { top: "20%", left: "50%" },
-            orientation: "horizontal-alt",
+            orientation: "horizontal",
             desktopOrientation: "landscape",
             odd: true,
           },
@@ -232,9 +258,9 @@ export const packs = [
           },
           {
             id: "c0-4",
-            src: peloton,
+            src: soen,
             style: { top: "10%", right: "0%" },
-            orientation: "square",
+            orientation: "vertical",
             desktopOrientation: "square",
             odd: true,
           },
@@ -252,9 +278,9 @@ export const packs = [
           },
           {
             id: "c1-2",
-            src: spotify,
+            src: soen,
             style: { top: "20%", left: "30%" },
-            orientation: "square",
+            orientation: "vertical",
             desktopOrientation: "square",
             odd: true,
           },
@@ -287,7 +313,7 @@ export const packs = [
           },
           {
             id: "c2-2",
-            src: misfits,
+            src: discord,
             style: { top: "30%", left: "50%" },
             orientation: "square",
             desktopOrientation: "square",
@@ -295,16 +321,16 @@ export const packs = [
           },
           {
             id: "c2-3",
-            src: uberEats,
+            src: coke,
             style: { top: "70%", left: "0%" },
             orientation: "square",
             desktopOrientation: "square",
           },
           {
             id: "c2-4",
-            src: peloton,
+            src: soenFull,
             style: { top: "10%", right: "0%" },
-            orientation: "horizontal",
+            orientation: "vertical-alt",
             desktopOrientation: "landscape",
             odd: true,
           },
@@ -321,14 +347,15 @@ export const packs = [
         images: [
           {
             id: "f0-1",
-            src: "/images/founders-0-1.jpg",
+            src: misfits,
             style: { top: "10%", left: "50%" },
             orientation: "vertical",
             desktopOrientation: "portrait",
           },
           {
             id: "f0-2",
-            src: "/images/founders-0-2.jpg",
+            src: going,
+            type: "video",
             style: { top: "40%", left: "30%" },
             orientation: "horizontal",
             desktopOrientation: "landscape",
@@ -336,14 +363,15 @@ export const packs = [
           },
           {
             id: "f0-3",
-            src: "/images/founders-0-3.jpg",
+            src: chrome,
+            type: "video",
             style: { top: "0%", right: "0%" },
             orientation: "horizontal",
             desktopOrientation: "landscape",
           },
           {
             id: "f0-4",
-            src: "/images/founders-0-4.jpg",
+            src: venmo,
             style: { top: "50%", left: "10%" },
             orientation: "vertical",
             desktopOrientation: "portrait",
@@ -356,14 +384,14 @@ export const packs = [
         images: [
           {
             id: "f1-1",
-            src: "/images/founders-1-1.jpg",
+            src: duo,
             style: { top: "5%", left: "10%" },
             orientation: "horizontal",
             desktopOrientation: "landscape",
           },
           {
             id: "f1-2",
-            src: "/images/founders-1-2.jpg",
+            src: meta,
             style: { top: "30%", right: "0%" },
             orientation: "vertical",
             desktopOrientation: "portrait",
@@ -371,14 +399,15 @@ export const packs = [
           },
           {
             id: "f1-3",
-            src: "/images/founders-1-3.jpg",
+            src: pera,
+            type: "video",
             style: { top: "40%", left: "10%" },
-            orientation: "square",
+            orientation: "vertical-alt",
             desktopOrientation: "square",
           },
           {
             id: "f1-4",
-            src: "/images/founders-1-4.jpg",
+            src: sonos,
             style: { top: "50%", left: "50%" },
             orientation: "horizontal",
             desktopOrientation: "landscape",
@@ -391,14 +420,16 @@ export const packs = [
         images: [
           {
             id: "f2-1",
-            src: "/images/founders-1-1.jpg",
+            src: bolt,
+            type: "video",
             style: { top: "30%", left: "10%" },
             orientation: "horizontal",
             desktopOrientation: "landscape",
           },
           {
             id: "f2-2",
-            src: "/images/founders-1-2.jpg",
+            src: pen,
+            type: "video",
             style: { top: "30%", right: "0%" },
             orientation: "vertical",
             desktopOrientation: "portrait",
@@ -406,14 +437,16 @@ export const packs = [
           },
           {
             id: "f2-3",
-            src: "/images/founders-1-3.jpg",
+            type: "video",
+            src: soenVideo,
             style: { top: "40%", left: "60%" },
-            orientation: "square",
+            orientation: "vertical-alt",
             desktopOrientation: "square",
           },
           {
             id: "f2-4",
-            src: "/images/founders-1-4.jpg",
+            src: elisa,
+            type: "video",
             style: { top: "0%", left: "50%" },
             orientation: "horizontal",
             desktopOrientation: "landscape",

@@ -25,13 +25,15 @@ export default function HeroImages({ activePack }) {
     const activePack = packs.find((p) => p.id === category);
     if (!activePack) return;
 
-    const wrapper = constraintRef.current?.querySelector('.home-images-pack-wrapper');
+    const wrapper = constraintRef.current?.querySelector(
+      ".home-images-pack-wrapper"
+    );
     if (!wrapper) return;
 
     // Get the actual width of one full set of segments
-    const segments = wrapper.querySelectorAll('.home-images-segment');
+    const segments = wrapper.querySelectorAll(".home-images-segment");
     const segmentCount = activePack.segments.length;
-    
+
     let totalWidth = 0;
     for (let i = 0; i < segmentCount; i++) {
       if (segments[i]) {
@@ -55,17 +57,19 @@ export default function HeroImages({ activePack }) {
 
   const handleDragEnd = (event, info) => {
     setIsDragging(false);
-    
+
     const activePack = packs.find((p) => p.id === category);
     if (!activePack) return;
 
-    const wrapper = constraintRef.current?.querySelector('.home-images-pack-wrapper');
+    const wrapper = constraintRef.current?.querySelector(
+      ".home-images-pack-wrapper"
+    );
     if (!wrapper) return;
 
     // Get the actual width of one full set of segments
-    const segments = wrapper.querySelectorAll('.home-images-segment');
+    const segments = wrapper.querySelectorAll(".home-images-segment");
     const segmentCount = activePack.segments.length;
-    
+
     let totalWidth = 0;
     for (let i = 0; i < segmentCount; i++) {
       if (segments[i]) {
@@ -76,7 +80,7 @@ export default function HeroImages({ activePack }) {
     const loopPoint = -totalWidth;
 
     let currentX = x.get();
-    
+
     // Wrap around if dragged past boundaries
     if (currentX <= loopPoint) {
       x.set(0);
@@ -101,14 +105,28 @@ export default function HeroImages({ activePack }) {
 
                 return (
                   <div key={img.id}>
-                    <img
-                      src={img.src}
-                      className={`floating-img ${
-                        visible ? "active" : "dimmed"
-                      } ${img.desktopOrientation}`}
-                      style={img.style}
-                      alt=""
-                    />
+                    {img.type === "video" ? (
+                      <video
+                        src={img.src}
+                        className={`floating-img ${
+                          visible ? "active" : "dimmed"
+                        } ${img.desktopOrientation}`}
+                        style={img.style}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                      />
+                    ) : (
+                      <img
+                        src={img.src}
+                        className={`floating-img ${
+                          visible ? "active" : "dimmed"
+                        } ${img.desktopOrientation}`}
+                        style={img.style}
+                        alt={img.title || ""}
+                      />
+                    )}
                   </div>
                 );
               })
@@ -146,25 +164,50 @@ export default function HeroImages({ activePack }) {
                   }}
                 >
                   {/* Render segments twice for seamless looping */}
-                  {[...pack.segments, ...pack.segments, ...pack.segments].map((seg, idx) => (
-                    <div
-                      key={`${seg.id}-${idx}`}
-                      className="home-images-segment"
-                    >
-                      {seg.images.map((img) => (
-                        <div
-                          key={`${img.id}-${idx}`}
-                          className={`img-box ${img.orientation} ${
-                            img.odd ? "odd" : ""
-                          }`}
-                        >
-                          <div className="img-box-inner">
-                            <img src={img.src} alt="" />
+                  {[...pack.segments, ...pack.segments, ...pack.segments].map(
+                    (seg, idx) => (
+                      <div
+                        key={`${seg.id}-${idx}`}
+                        className="home-images-segment"
+                      >
+                        {seg.images.map((img) => (
+                          <div
+                            key={`${img.id}-${idx}`}
+                            className={`img-box ${img.orientation} ${
+                              img.odd ? "odd" : ""
+                            }`}
+                          >
+                            <div className="img-box-inner">
+                              {img.type === "video" ? (
+                                <video
+                                  src={img.src}
+                                  style={{
+                                    width: "100%",
+                                    height: "100%",
+                                    ...img.style,
+                                  }}
+                                  autoPlay
+                                  loop
+                                  muted
+                                  playsInline
+                                />
+                              ) : (
+                                <img
+                                  src={img.src}
+                                  style={{
+                                    width: "100%",
+                                    height: "100%",
+                                    ...img.style,
+                                  }}
+                                  alt={img.title || ""}
+                                />
+                              )}
+                            </div>
                           </div>
-                        </div>
-                      ))}
-                    </div>
-                  ))}
+                        ))}
+                      </div>
+                    )
+                  )}
                 </motion.div>
               </motion.div>
             );
