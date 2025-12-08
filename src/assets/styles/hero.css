@@ -187,14 +187,18 @@
   background: #fff;
 }
 
+/* Add transition to all spans so they smoothly return to normal */
+.gt-th > span {
+  transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
 .dimmed {
   opacity: 0.5;
   filter: brightness(0.15);
-  transition: filter 0.25s ease-in-out;
 }
+
 .hero-text.has-hover > span:not(.underline-animate) {
-  filter: brightness(0.35);
-  transition: filter 0.25s ease;
+  filter: brightness(0.15);
 }
 
 .img-wrapper {
