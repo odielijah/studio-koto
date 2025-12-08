@@ -190,6 +190,7 @@
 /* Add transition to all spans so they smoothly return to normal */
 .gt-th > span {
   transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  will-change: filter, opacity;
 }
 
 .dimmed {
@@ -338,5 +339,7 @@
       transform: translate3d(-50%, 0, 0);
     }
   }
-
+  .gt-th > span {
+    transition: filter 0.15s ease-in-out, opacity 0.15s ease-in-out;
+  }
 }
