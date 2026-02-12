@@ -46,7 +46,7 @@ I built it as a single-page application (SPA) to show how I can turn a professio
 - *The Challenge:* Creating a slider that feels high-end and keeps its focus even when the screen size changes.
 - *The Solution:* Using Swiper.js, I implemented a "centered" layout. I wrote a custom function to calculate the opacity of slides based on their distance from the center. This ensures that the middle project always stands out, while the side projects fade away smoothly.
 
-#### 3. Creating the Auto-Scrolling Team List
+#### 3. Creating the Auto-Scrollin Team Slider
 - *The Challenge:* Making two separate components—a vertical name list and a photo display—work together in perfect sync.
 - *The Solution:* I built a coordinated system where a vertical Swiper list auto-plays through names. I used a "listener" to detect when the name changes, which then triggers a synchronized fade animation on the team photo. This creates a professional, hands-free "member showcase" effect.
 
@@ -54,6 +54,12 @@ I built it as a single-page application (SPA) to show how I can turn a professio
 - *The Challenge:** Managing complex animations that Tailwind alone can't handle while keeping the styling organized.
 - **The Solution:* I used a hybrid approach. I used Tailwind CSS for the layout, spacing, and colors to keep development fast. For the complex, custom motion effects (like the Hero overlays and Swiper custom navigation), I wrote focused CSS files to gain pixel-perfect control over the design.
 
-## How to 
+## How to Run Locally
+- Clone the repository: `git clone https://github.com/odielijah/koto-studio.git`
+- Install dependencies: `npm install`
+- Run the development server: `npm run dev`
+- Open `https://localhost:5173` in your browser
+
+## Preview
 
 
