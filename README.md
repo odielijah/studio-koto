@@ -6,4 +6,16 @@ This isn't just a clone, I took the original Studio Koto design and refurbished 
 [Live Demo](https://studio-koto-odielijah.netlify.app/)
 
 ## Technologies
-- React
+- `React`
+- `Vite`
+- `Tailwind CSS`
+- `Framer Motion`
+- `Netlify`
+
+## Key Features
+
+## Challenges
+
+## The "Why"
+
+
