@@ -14,15 +14,24 @@ I built it as a single-page application (SPA) to show how I can turn a professio
 - `Netlify`
 
 ## Key Features
-- **Interactive Hero Interactions** - I built a "hover-to-reveal" system where hovering over specific underlined text triggers a beautiful display of category-specific images and videos.
+- **Interactive Hero** - I built a "hover-to-reveal" system where hovering over specific underlined text triggers a beautiful display of category-specific images and videos.
 
 - **Custom Page Transitions** - Moving between sections feels connected and smooth rather than jumping abruptly.
 
 - **Interactive Custom Cursor** - A unique cursor that changes its look based on what you are hovering over (like "Read" or "View" modes).
 
-- **Immersive Page Loader** - A custom entrance animation that ensures a great first impression when the site loads.
+- **Page Loader** - A custom entrance animation that ensures a great first impression when the site loads.
 
 - **Smooth Scrolling Feed** - Motion-heavy effects that feel natural and organic as the user explores the content feed.
+
+## Project Architecture
+- **State-Driven Interactions** - In the `HeroSection`, I used React state to track which "pack" of images should be visible.
+
+- **App Wrapper** - I used a `PageLoader` and `TransitionProvider` as top-level components to wrap the entire site in a consistent animated experience.
+
+- **Centralized Routing** - All pages (Home, Work, About, Careers, and Contact) are managed in a single `Routes` file for easy navigation.
+
+- **Mobile Optimization** - I implemented custom logic to detect screen size and change how the hover-effects and sliders behave on touch devices.
 
 ## Challenges
 
