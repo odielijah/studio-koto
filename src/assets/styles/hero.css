@@ -153,7 +153,6 @@
   opacity: 1;
   transform: scale(0.85) translateY(30px);
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  background: #fff;
   aspect-ratio: 3 / 4;
   pointer-events: none;
   transition: opacity 0.35s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
@@ -163,7 +162,6 @@
 .floating-img.active {
   opacity: 1;
   transform: scale(1) translateY(0);
-  background: #fff;
   filter: brightness(1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
@@ -184,7 +182,6 @@
 .floating-img.square {
   aspect-ratio: 1 / 1;
   height: clamp(140px, 30vh, 200px);
-  background: #fff;
 }
 
 /* Add transition to all spans so they smoothly return to normal */
@@ -301,25 +298,20 @@
   .img-box.vertical {
     max-width: unset;
     width: 36vw;
-    background: #fff;
   }
   .img-box.vertical-alt {
     width: 36vw;
     max-width: unset;
-    background: #fff;
   }
   .img-box.horizontal {
     max-width: unset;
     width: 56vw;
-    background: #fff;
   }
   .img-box.horizontal-alt {
     height: 36vw;
     max-width: unset;
-    background: #fff;
   }
   .img-box.square {
-    background: #fff;
     max-width: unset;
     width: 56vw;
   }
