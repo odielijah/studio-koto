@@ -7,9 +7,9 @@ function renderFeed() {
     <motion.div
       className="col-feed"
       key={index}
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, ease: "easeOut", delay: index * 0.1 }}
+      initial={{ y: 40 }}
+      whileInView={{ y: 0 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
       viewport={{ once: true }}
     >
       <div className="feed">
